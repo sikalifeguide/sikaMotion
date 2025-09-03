@@ -24,13 +24,29 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section class="hero">
-    <h1>HELLO and WELCOME to <span>SikaMotion</span></h1>
-    <p><i>SikaLifeguide @ sikaMotion GROUP OF COMPANIES</i></p>
-    <div class="hero-buttons">
-      <a href="#form" class="btn">Join Us</a>
-      <a href="#" class="btn btn-outline">Learn More</a>
+    <!-- Slideshow Background -->
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="images/slide1.jpg" alt="Slide 1">
+      </div>
+      <div class="slide fade">
+        <img src="images/slide2.jpg" alt="Slide 2">
+      </div>
+      <div class="slide fade">
+        <img src="images/slide3.jpg" alt="Slide 3">
+      </div>
+    </div>
+
+    <!-- Overlay Content -->
+    <div class="hero-content">
+      <h1>HELLO and WELCOME to <span>SikaMotion</span></h1>
+      <p><i>SikaLifeguide @ sikaMotion GROUP OF COMPANIES</i></p>
+      <div class="hero-buttons">
+        <a href="#form" class="btn">Join Us</a>
+        <a href="#" class="btn btn-outline">Learn More</a>
+      </div>
     </div>
   </section>
 
@@ -67,22 +83,6 @@
     </form>
   </section>
 
-  <!-- Slideshow -->
-  <div class="slideshow-container">
-    <div class="slide fade">
-      <img src="images/slide1.jpg" alt="Slide 1">
-      <div class="caption">Our Journey Begins</div>
-    </div>
-    <div class="slide fade">
-      <img src="images/slide2.jpg" alt="Slide 2">
-      <div class="caption">Together We Grow</div>
-    </div>
-    <div class="slide fade">
-      <img src="images/slide3.jpg" alt="Slide 3">
-      <div class="caption">Success in Motion</div>
-    </div>
-  </div>
-
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 sikaMotion. All Rights Reserved.</p>
@@ -106,7 +106,7 @@
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Change slide every 3s
+      setTimeout(showSlides, 4000); // Change slide every 4s
     }
   </script>
 </body>
