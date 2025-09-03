@@ -1,0 +1,56 @@
+body{
+    background-color: gold;
+    color: black;
+
+}
+header{
+    padding: 1px;
+    position: relative;
+    background-color: green ;
+    color: gold;
+    gap: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+    
+}
+img{
+    border-radius: 5px;
+    width: 15%;
+    height: 10%;
+    position: relative;
+}
+main{
+    text-align: left; 
+    background-color: white; 
+    color: black;
+    
+}
+.form{
+    align-content: center;
+}
+h1{
+    color: black;
+    background-color: green;
+}
+h2{
+    background-color: gold;
+}
+p{
+    background-color: gold;
+    
+}
+h4{
+    font-size: large;
+}
+footer{
+    background-color: greenyellow ;
+    padding: 2px;
+    align-content: center;
+}
+
+
