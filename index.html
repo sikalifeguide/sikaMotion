@@ -64,19 +64,21 @@
   <!-- Form Section -->
   <section class="form-section" id="form">
     <h3>Register to Join Us</h3>
-    <form class="form">
-      <input type="text" placeholder="Type your full name" required>
-      <input type="email" placeholder="Enter a valid email" required>
-      <input type="password" placeholder="Enter your password" required>
-      <select required>
+    <form name="register" method="POST" data-netlify="true" action="thank-you.html">
+      <input type="hidden" name="form-name" value="register">
+
+      <input type="text" name="name" placeholder="Type your full name" required>
+      <input type="email" name="email" placeholder="Enter a valid email" required>
+      <input type="password" name="password" placeholder="Enter your password" required>
+      <select name="gender" required>
         <option value="">Select gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
-      <input type="date" required>
+      <input type="date" name="dob" required>
       <div class="checkboxes">
-        <label><input type="checkbox" value="partner"> Partner</label>
-        <label><input type="checkbox" value="customer"> Customer</label>
+        <label><input type="checkbox" name="role" value="partner"> Partner</label>
+        <label><input type="checkbox" name="role" value="customer"> Customer</label>
       </div>
       <button type="submit">Submit</button>
     </form>
