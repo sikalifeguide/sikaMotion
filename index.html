@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sikaMotion site</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SikaMotion Site</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!--header-->
-    <header>
-        <div class="left">
-            <img src="images/myLogoMaker_14-08-2025_213211_Nero_AI_Background_Remover.png" alt="logo">
-            <b>sikaMotion</b>
-        </div>
-        <div class="right">
-            <input type="search" value="search here">
-                  
-     
-        </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/myLogoMaker_14-08-2025_213211_Nero_AI_Background_Remover.png" alt="SikaMotion Logo" />
+      <span>SikaMotion</span>
+    </div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="search-bar">
+      <input type="search" placeholder="Search here..." />
+    </div>
+  </header>
 
+  <!-- Main -->
+  <main class="main">
+    <h1>Hello and Welcome to</h1>
+    <h2><i>SikaLifeguide @ SikaMotion Group of Companies</i></h2>
 
-    </header>
-    <!--main-->
-    <main>
-        <h1><b>HELLO and WELCOME to</b></h1><h2><i>SikaLifeguide@sikaMotion GROUP OF COMPANIES</i></h2>
-        <img src="images/WhatsApp Image 2025-07-06 at 12.01.59_7cb2c892.jpg" alt="picture">
-        <b>we cherish and love you as our partner and customer.</b>
-        <p><b><i>It is with joy and the passion  in making  a motion, for serving and creating a guide to meet success; sikaMotion emerged.</i></b></p>
-        
+    <img src="images/WhatsApp Image 2025-07-06 at 12.01.59_7cb2c892.jpg" alt="Welcome Picture" class="main-img" />
 
-<i>Be inspired by this song as you login to become our partner and cherished customer.</i><br>
-<audio controls>
-            <source src="audios/sarkodie_messiah_ft...._55020.mp3"/>
+    <p><b>We cherish and love you as our partner and customer.</b></p>
+    <p><i>It is with joy and passion for serving and creating a guide to meet success that SikaMotion emerged.</i></p>
 
-        </audio controls>
-       <hr> 
-        <form>
-            <input type="text" placeholder="type your full name" /><br>
-            <input type="email" placeholder="enter a valid email"/><br>
-            <input type="password" placeholder="enter your password"/><br>
-            <select>
-                <option : male>male</option>
-                <option :female>female</option>
-            </select><br>
-            <input type="date"/><br>
-            <input type="checkbox" value="partner"/>partner_
-            <input type="checkbox" value="customer"/>customer_
-            <br> <input type="submit">
+    <p><i>Be inspired by this song as you login to become our partner and cherished customer.</i></p>
+    <audio controls>
+      <source src="audios/sarkodie_messiah_ft...._55020.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
 
-        </form>
+    <hr />
 
-    </main>
+    <!-- Form -->
+    <form class="form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      
+      <select required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
 
-    
-    <!--footer-->
-    <footer>
-         <nav>
-                <ul>
-                    <li><a href="pages/about.html">ABOUT </a></li>
-                </ul>
-            </nav>
+      <input type="date" required />
 
-    </footer>
-    
+      <label><input type="checkbox" value="partner" /> Partner</label>
+      <label><input type="checkbox" value="customer" /> Customer</label>
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 SikaMotion Group of Companies | All Rights Reserved</p>
+    <nav>
+      <a href="pages/about.html">About</a> | 
+      <a href="#">Privacy Policy</a>
+    </nav>
+  </footer>
 </body>
 </html>
