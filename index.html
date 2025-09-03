@@ -16,8 +16,8 @@
     <nav class="nav">
       <a href="#">Home</a>
       <a href="pages/about.html">About</a>
-      <a href="pages/contact.html">Contact</a>
-      <a href="pages/privacy.html">Privacy</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
     </nav>
     <div class="search-bar">
       <input type="search" placeholder="Search here..." />
@@ -36,11 +36,27 @@
     </div>
   </section>
 
+  <!-- Slideshow Section -->
+  <section class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/slide1.jpg" alt="Slide 1">
+      <div class="caption">Innovation at SikaMotion</div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/slide2.jpg" alt="Slide 2">
+      <div class="caption">Your Success, Our Mission</div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/slide3.jpg" alt="Slide 3">
+      <div class="caption">Trusted by Partners & Customers</div>
+    </div>
+  </section>
+
   <!-- Main Content -->
   <main class="main">
     <h2>SikaLifeguide @ SikaMotion Group of Companies</h2>
-
-    <img src="images/WhatsApp Image 2025-07-06 at 12.01.59_7cb2c892.jpg" alt="Welcome Picture" class="main-img" />
 
     <p><b>We cherish and love you as our partner and customer.</b></p>
     <p><i>It is with joy and passion for serving and creating a guide to meet success that SikaMotion emerged.</i></p>
@@ -87,5 +103,22 @@
       <a href="#">Privacy Policy</a>
     </nav>
   </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 4000); // Change slide every 4 seconds
+    }
+  </script>
 </body>
 </html>
