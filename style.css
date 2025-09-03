@@ -175,6 +175,49 @@ body {
   font-size: 0.9rem;
 }
 
+/* Slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+
+/* Fade animation */
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
 /* Footer */
 .footer {
   background: #1a1a1a;
