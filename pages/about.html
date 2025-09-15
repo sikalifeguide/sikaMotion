@@ -76,6 +76,26 @@
       color: green;
       margin-bottom: 8px;
       font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Subcategories */
+    .subcategories {
+      display: none;
+      margin-top: 15px;
+      padding-left: 15px;
+    }
+
+    .subcategories h3 {
+      color: #006400;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .subcategories p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 12px;
     }
 
     /* Footer */
@@ -126,9 +146,22 @@
     <p><b>OUR SERVICES INCLUDE:</b></p>
     <ul>
       <li>
-        <h2>Fashion Design</h2>
+        <h2 id="fashionToggle">Fashion Design</h2>
         <p>We bring fashion ideas to life. Whether you create your own design or choose from our collection, we provide the perfect fabric and style tailored to every occasion. From design to production, we handle it all.</p>
+        
+        <!-- Subcategories -->
+        <div id="fashionSubcategories" class="subcategories">
+          <h3>👕 Clothing</h3>
+          <p>Everyday wear, formal outfits, traditional attire, and seasonal collections designed to suit all occasions.</p>
+
+          <h3>👜 Accessories</h3>
+          <p>Bags, belts, hats, sunglasses, and jewelry that complement and enhance your style.</p>
+
+          <h3>✨ Specialized Niches</h3>
+          <p>Luxury fashion, sustainable clothing, sportswear, and designer collaborations for unique tastes.</p>
+        </div>
       </li>
+
       <li>
         <h2>Web Design</h2>
         <p>We craft and manage professional websites for businesses of all sizes, ensuring your digital presence reflects your vision.</p>
@@ -150,5 +183,16 @@
       </ul>
     </nav>
   </footer>
+
+  <!-- Script for toggle -->
+  <script>
+    const fashionToggle = document.getElementById("fashionToggle");
+    const fashionSubcategories = document.getElementById("fashionSubcategories");
+
+    fashionToggle.addEventListener("click", () => {
+      fashionSubcategories.style.display =
+        fashionSubcategories.style.display === "block" ? "none" : "block";
+    });
+  </script>
 </body>
 </html>
