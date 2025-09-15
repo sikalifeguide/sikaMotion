@@ -146,11 +146,10 @@
     <p><b>OUR SERVICES INCLUDE:</b></p>
     <ul>
       <li>
-        <h2 id="fashionToggle">Fashion Design</h2>
-        <p>We bring fashion ideas to life. Whether you create your own design or choose from our collection, we provide the perfect fabric and style tailored to every occasion. From design to production, we handle it all.</p>
-        
-        <!-- Subcategories -->
-        <div id="fashionSubcategories" class="subcategories">
+        <h2 class="toggle">Fashion Design</h2>
+        <div class="subcategories">
+          <p>We bring fashion ideas to life. Whether you create your own design or choose from our collection, we provide the perfect fabric and style tailored to every occasion. From design to production, we handle it all.</p>
+
           <h3>👕 Clothing</h3>
           <p>Everyday wear, formal outfits, traditional attire, and seasonal collections designed to suit all occasions.</p>
 
@@ -163,12 +162,35 @@
       </li>
 
       <li>
-        <h2>Web Design</h2>
-        <p>We craft and manage professional websites for businesses of all sizes, ensuring your digital presence reflects your vision.</p>
+        <h2 class="toggle">Web Design</h2>
+        <div class="subcategories">
+          <p>We craft and manage professional websites for businesses of all sizes, ensuring your digital presence reflects your vision.</p>
+
+          <h3>🌐 Business Websites</h3>
+          <p>Professional websites to showcase your brand, products, and services online.</p>
+
+          <h3>🛒 E-Commerce Solutions</h3>
+          <p>Custom online stores with shopping carts, payment gateways, and product catalogs.</p>
+
+          <h3>📱 Responsive Design</h3>
+          <p>Mobile-friendly layouts that look perfect on phones, tablets, and desktops.</p>
+        </div>
       </li>
+
       <li>
-        <h2>More Services</h2>
-        <p>Stay tuned as we expand into new creative fields under the sikaMotion brand.</p>
+        <h2 class="toggle">More Services</h2>
+        <div class="subcategories">
+          <p>Stay tuned as we expand into new creative fields under the sikaMotion brand.</p>
+
+          <h3>🎬 Media Production</h3>
+          <p>Video editing, photography, and promotional content for your brand.</p>
+
+          <h3>📊 Business Consulting</h3>
+          <p>Advisory services to guide startups and established companies toward growth.</p>
+
+          <h3>🤝 Partnerships</h3>
+          <p>Collaborations and programs designed to create shared opportunities for success.</p>
+        </div>
       </li>
     </ul>
   </main>
@@ -186,12 +208,14 @@
 
   <!-- Script for toggle -->
   <script>
-    const fashionToggle = document.getElementById("fashionToggle");
-    const fashionSubcategories = document.getElementById("fashionSubcategories");
+    const toggles = document.querySelectorAll(".toggle");
 
-    fashionToggle.addEventListener("click", () => {
-      fashionSubcategories.style.display =
-        fashionSubcategories.style.display === "block" ? "none" : "block";
+    toggles.forEach(toggle => {
+      toggle.addEventListener("click", () => {
+        const subcategories = toggle.nextElementSibling;
+        subcategories.style.display =
+          subcategories.style.display === "block" ? "none" : "block";
+      });
     });
   </script>
 </body>
