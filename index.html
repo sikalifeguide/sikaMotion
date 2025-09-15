@@ -3,58 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sikaMotion Site</title>
+  <title>sikaMotion • Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="logo">
-      <img src="images/myLogoMaker_14-08-2025_213211_Nero_AI_Background_Remover.png" alt="logo">
+      <img src="images/myLogoMaker_14-08-2025_213211_Nero_AI_Background_Remover.png" alt="sikaMotion Logo">
       <span>sikaMotion</span>
     </div>
     <nav class="nav">
-      <a href="#">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="pages/about.html">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+      <a href="#services">Services</a>
+      <a href="pages/contact.html">Contact</a>
     </nav>
     <div class="search-bar">
-      <input type="search" placeholder="Search here...">
+      <input type="search" placeholder="Search here..." aria-label="Search">
     </div>
   </header>
 
-  <!-- Hero Section with Slideshow -->
+  <!-- Hero Section -->
   <section class="hero">
-    <!-- Slideshow Background -->
+    <!-- Slideshow -->
     <div class="slideshow-container">
       <div class="slide fade">
-        <img src="images/slide1.jpg" alt="Slide 1">
+        <img src="images/slide1.jpg" alt="Fashion creativity showcase">
       </div>
       <div class="slide fade">
-        <img src="images/slide2.jpg" alt="Slide 2">
+        <img src="images/slide2.jpg" alt="Web design and digital solutions">
       </div>
       <div class="slide fade">
-        <img src="images/slide3.jpg" alt="Slide 3">
+        <img src="images/slide3.jpg" alt="Creative services at sikaMotion">
       </div>
     </div>
 
-    <!-- Overlay Content -->
+    <!-- Hero Content -->
     <div class="hero-content">
-      <h1>HELLO and WELCOME to <span>SikaMotion</span></h1>
+      <h1>HELLO & WELCOME to <span>sikaMotion</span></h1>
       <p><i>SikaLifeguide @ sikaMotion GROUP OF COMPANIES</i></p>
       <div class="hero-buttons">
         <a href="#form" class="btn">Join Us</a>
-        <a href="#" class="btn btn-outline">Learn More</a>
+        <a href="pages/about.html" class="btn btn-outline">Learn More</a>
       </div>
     </div>
   </section>
 
-  <!-- Main Section -->
+  <!-- Main -->
   <main class="main">
     <h2>We cherish and love you as our partner and customer.</h2>
-    <p><b><i>It is with joy and the passion in making a motion, for serving and creating a guide to meet success; sikaMotion emerged.</i></b></p>
-    <p><i>Be inspired by this song as you login to become our partner and cherished customer.</i></p>
+    <p><b><i>With joy and passion, we serve and create a guide toward success — that’s the motion behind sikaMotion.</i></b></p>
+    <p><i>Be inspired by this song as you register to become our partner and cherished customer.</i></p>
+    
     <audio controls>
       <source src="audios/sarkodie_messiah_ft...._55020.mp3" type="audio/mp3">
       Your browser does not support the audio element.
@@ -70,16 +71,21 @@
       <input type="text" name="name" placeholder="Type your full name" required>
       <input type="email" name="email" placeholder="Enter a valid email" required>
       <input type="password" name="password" placeholder="Enter your password" required>
+      
       <select name="gender" required>
         <option value="">Select gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
+
       <input type="date" name="dob" required>
-      <div class="checkboxes">
+      
+      <fieldset class="checkboxes">
+        <legend>Select role(s):</legend>
         <label><input type="checkbox" name="role" value="partner"> Partner</label>
         <label><input type="checkbox" name="role" value="customer"> Customer</label>
-      </div>
+      </fieldset>
+
       <button type="submit">Submit</button>
     </form>
   </section>
@@ -88,9 +94,9 @@
   <footer class="footer">
     <p>&copy; 2025 sikaMotion. All Rights Reserved.</p>
     <nav>
-      <a href="#">Home</a> | 
+      <a href="index.html">Home</a> | 
       <a href="pages/about.html">About</a> | 
-      <a href="#">Contact</a>
+      <a href="pages/contact.html">Contact</a>
     </nav>
   </footer>
 
@@ -100,14 +106,14 @@
     showSlides();
 
     function showSlides() {
-      let slides = document.getElementsByClassName("slide");
+      const slides = document.getElementsByClassName("slide");
       for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // Change slide every 4s
+      setTimeout(showSlides, 4000); // 4s interval
     }
   </script>
 </body>
