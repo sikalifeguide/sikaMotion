@@ -24,78 +24,115 @@
       background: linear-gradient(90deg, green, #006400);
       color: gold;
       text-align: center;
-      padding: 20px;
-      font-size: 1.8rem;
+      padding: 25px;
+      font-size: 2rem;
       font-weight: bold;
       letter-spacing: 1px;
     }
 
     /* Main */
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
+    }
+
+    section {
       background: #fff;
+      padding: 25px;
+      margin-bottom: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    main h4 {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
+    section h2 {
       color: #006400;
-      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
     }
 
-    main p {
-      margin-bottom: 15px;
+    section p {
       font-size: 1rem;
       color: #444;
+      margin-bottom: 15px;
     }
 
-    main ul {
+    /* Services list */
+    ul.services {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
-
-    main li {
+    ul.services li {
       margin-bottom: 20px;
       padding: 15px;
       border-left: 5px solid gold;
       background: #f1fdf1;
       border-radius: 8px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
     }
-
-    main li:hover {
+    ul.services li:hover {
       transform: translateY(-3px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-
-    main li h2 {
+    ul.services li h3 {
       color: green;
       margin-bottom: 8px;
       font-size: 1.2rem;
-      cursor: pointer;
     }
 
-    /* Subcategories */
+    /* Subcategories hidden by default */
     .subcategories {
-      display: none;
-      margin-top: 15px;
+      margin-top: 10px;
       padding-left: 15px;
+      display: none;
+      font-size: 0.95rem;
+      color: #333;
     }
-
-    .subcategories h3 {
+    .subcategories h4 {
       color: #006400;
       margin-bottom: 5px;
       font-size: 1rem;
     }
-
     .subcategories p {
-      font-size: 0.95rem;
-      color: #555;
       margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    /* Accreditation / partners */
+    .partners ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+    .partners ul li {
+      background: #f9f9f9;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* Call to action */
+    .call-to-action {
+      text-align: center;
+      margin: 40px auto;
+    }
+    .call-to-action a {
+      display: inline-block;
+      background: gold;
+      color: #1a1a1a;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .call-to-action a:hover {
+      background: #ffcc00;
     }
 
     /* Footer */
@@ -103,7 +140,7 @@
       background: #1a1a1a;
       color: #fff;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 50px;
     }
 
@@ -135,64 +172,63 @@
 
   <!-- Main -->
   <main>
-    <h4><b>sikaMotion</b> is a collective brand name for creative companies united by a common goal: <i>money and success</i>.</h4>
-    
-    <p><i>sikaMotion</i> was founded on <b>July 1st, 2025</b>, beginning with a vision and a meaningful brand: <b>SIKA LIFEGUIDE</b>.</p>
-    
-    <p><b>SIKA LIFEGUIDE</b> serves as the inspiration behind <b>sikaMotion</b>. It was designed as a map to success — a guide to building lifelong wealth. From this idea grew <b>SikaLifeguide@sikaMotion Group Of Companies (SL@SM GOC)</b>.</p>
-    
-    <p>With passion and dedication, we serve our customers and partners by delivering high-quality services at affordable costs.</p>
-    
-    <p><b>OUR SERVICES INCLUDE:</b></p>
-    <ul>
-      <li>
-        <h2 class="toggle">Fashion Design</h2>
-        <div class="subcategories">
-          <p>We bring fashion ideas to life. Whether you create your own design or choose from our collection, we provide the perfect fabric and style tailored to every occasion. From design to production, we handle it all.</p>
+    <!-- History / Intro -->
+    <section>
+      <h2>Our Story</h2>
+      <p><b>sikaMotion</b> is a collective brand name for creative companies united by a common goal: <i>money and success</i>. We began on <b>July 1st, 2025</b>, inspired by our flagship idea <b>SIKA LIFEGUIDE</b> — a vision to create a lifelong map to success.</p>
+      <p>From this foundation grew <b>SikaLifeguide@sikaMotion Group Of Companies (SL@SM GOC)</b>. What started as one idea now drives a growing group of creative businesses working to shape industries and empower individuals.</p>
+    </section>
 
-          <h3>👕 Clothing</h3>
-          <p>Everyday wear, formal outfits, traditional attire, and seasonal collections designed to suit all occasions.</p>
-
-          <h3>👜 Accessories</h3>
-          <p>Bags, belts, hats, sunglasses, and jewelry that complement and enhance your style.</p>
-
-          <h3>✨ Specialized Niches</h3>
-          <p>Luxury fashion, sustainable clothing, sportswear, and designer collaborations for unique tastes.</p>
-        </div>
-      </li>
-
-      <li>
-        <h2 class="toggle">Web Design</h2>
-        <div class="subcategories">
+    <!-- Services -->
+    <section>
+      <h2>Our Services</h2>
+      <ul class="services">
+        <li onclick="toggleSubcategories()">
+          <h3>Fashion Design</h3>
+          <p>We bring fashion ideas to life. Click to see more about our fashion subcategories.</p>
+          <div id="fashion-subcategories" class="subcategories">
+            <h4>Clothing</h4>
+            <p>Stylish, modern, and timeless outfits designed for men, women, and children.</p>
+            <h4>Accessories</h4>
+            <p>From jewelry to handbags, we craft details that complete every look.</p>
+            <h4>Specialized Niches</h4>
+            <p>Unique cultural, seasonal, and event-focused designs tailored to specific needs.</p>
+          </div>
+        </li>
+        <li>
+          <h3>Web Design</h3>
           <p>We craft and manage professional websites for businesses of all sizes, ensuring your digital presence reflects your vision.</p>
-
-          <h3>🌐 Business Websites</h3>
-          <p>Professional websites to showcase your brand, products, and services online.</p>
-
-          <h3>🛒 E-Commerce Solutions</h3>
-          <p>Custom online stores with shopping carts, payment gateways, and product catalogs.</p>
-
-          <h3>📱 Responsive Design</h3>
-          <p>Mobile-friendly layouts that look perfect on phones, tablets, and desktops.</p>
-        </div>
-      </li>
-
-      <li>
-        <h2 class="toggle">More Services</h2>
-        <div class="subcategories">
+        </li>
+        <li>
+          <h3>More Services</h3>
           <p>Stay tuned as we expand into new creative fields under the sikaMotion brand.</p>
+        </li>
+      </ul>
+    </section>
 
-          <h3>🎬 Media Production</h3>
-          <p>Video editing, photography, and promotional content for your brand.</p>
+    <!-- Commitment -->
+    <section>
+      <h2>Our Commitment</h2>
+      <p>At sikaMotion, we believe in excellence, transparency, and delivering value at every step. From fabric sourcing to web design, from customer support to after-sales, we strive to exceed expectations.</p>
+      <p>Our culture is driven by passion and dedication — ensuring our clients and partners receive only the best.</p>
+    </section>
 
-          <h3>📊 Business Consulting</h3>
-          <p>Advisory services to guide startups and established companies toward growth.</p>
+    <!-- Partners & Accreditation -->
+    <section class="partners">
+      <h2>Partners & Accreditation</h2>
+      <ul>
+        <li>Sas Network Solutios</li>
+        <li>KAMOG Office</li>
+        <li>Sustainable Fashion Alliance</li>
+        <li>Design & Tech Awards</li>
+        <li>Community Development Projects</li>
+      </ul>
+    </section>
 
-          <h3>🤝 Partnerships</h3>
-          <p>Collaborations and programs designed to create shared opportunities for success.</p>
-        </div>
-      </li>
-    </ul>
+    <!-- Call to Action -->
+    <div class="call-to-action">
+      <a href="contact.html">Get Started With Us</a>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -206,17 +242,12 @@
     </nav>
   </footer>
 
-  <!-- Script for toggle -->
+  <!-- JS -->
   <script>
-    const toggles = document.querySelectorAll(".toggle");
-
-    toggles.forEach(toggle => {
-      toggle.addEventListener("click", () => {
-        const subcategories = toggle.nextElementSibling;
-        subcategories.style.display =
-          subcategories.style.display === "block" ? "none" : "block";
-      });
-    });
+    function toggleSubcategories() {
+      const sub = document.getElementById("fashion-subcategories");
+      sub.style.display = (sub.style.display === "block") ? "none" : "block";
+    }
   </script>
 </body>
 </html>
