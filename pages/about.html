@@ -183,10 +183,10 @@
     <section>
       <h2>Our Services</h2>
       <ul class="services">
-        <li onclick="toggleSubcategories()">
+        <li onclick="toggleSub('fashion')">
           <h3>Fashion Design</h3>
           <p>We bring fashion ideas to life. Click to see more about our fashion subcategories.</p>
-          <div id="fashion-subcategories" class="subcategories">
+          <div id="sub-fashion" class="subcategories">
             <h4>Clothing</h4>
             <p>Stylish, modern, and timeless outfits designed for men, women, and children.</p>
             <h4>Accessories</h4>
@@ -195,13 +195,29 @@
             <p>Unique cultural, seasonal, and event-focused designs tailored to specific needs.</p>
           </div>
         </li>
-        <li>
+        <li onclick="toggleSub('web')">
           <h3>Web Design</h3>
-          <p>We craft and manage professional websites for businesses of all sizes, ensuring your digital presence reflects your vision.</p>
+          <p>We build responsive, modern websites. Click to view details.</p>
+          <div id="sub-web" class="subcategories">
+            <h4>Corporate Websites</h4>
+            <p>Professional websites for businesses, schools, and organizations.</p>
+            <h4>E-Commerce</h4>
+            <p>Online stores with payment integration and smooth shopping experience.</p>
+            <h4>Portfolio & Blogs</h4>
+            <p>Personal sites that showcase creativity, skills, and ideas beautifully.</p>
+          </div>
         </li>
-        <li>
+        <li onclick="toggleSub('more')">
           <h3>More Services</h3>
-          <p>Stay tuned as we expand into new creative fields under the sikaMotion brand.</p>
+          <p>Stay tuned as we expand into more fields. Click for a sneak peek.</p>
+          <div id="sub-more" class="subcategories">
+            <h4>IT Consultancy</h4>
+            <p>Guidance on digital transformation, software solutions, and infrastructure setup.</p>
+            <h4>Training Programs</h4>
+            <p>Workshops and seminars for students, entrepreneurs, and professionals.</p>
+            <h4>Future Ventures</h4>
+            <p>We are continuously innovating in new sectors — announcements coming soon.</p>
+          </div>
         </li>
       </ul>
     </section>
@@ -217,8 +233,8 @@
     <section class="partners">
       <h2>Partners & Accreditation</h2>
       <ul>
-        <li>Sas Network Solutios</li>
-        <li>KAMOG Office</li>
+        <li>Cisco Partner</li>
+        <li>Microsoft Certified</li>
         <li>Sustainable Fashion Alliance</li>
         <li>Design & Tech Awards</li>
         <li>Community Development Projects</li>
@@ -244,8 +260,8 @@
 
   <!-- JS -->
   <script>
-    function toggleSubcategories() {
-      const sub = document.getElementById("fashion-subcategories");
+    function toggleSub(id) {
+      const sub = document.getElementById("sub-" + id);
       sub.style.display = (sub.style.display === "block") ? "none" : "block";
     }
   </script>
