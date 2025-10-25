@@ -6,28 +6,98 @@
   <title>sikaMotion • Contact</title>
   <link rel="stylesheet" href="../style.css">
   <style>
-    /* Page-specific contact styling */
-    main.contact-main {
-      text-align: center;
-      padding: 3rem 1rem;
+    /* --- PAGE SPECIFIC STYLES --- */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       background-color: #f8f9fa;
+      font-family: "Segoe UI", Arial, sans-serif;
       color: #333;
+      margin: 0;
     }
 
-    .contact-info {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      line-height: 1.8;
+    main.contact-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 1rem;
     }
 
-    .contact-info a {
+    main.contact-main h2 {
+      font-size: 2rem;
       color: #004aad;
-      text-decoration: none;
-      font-weight: bold;
+      margin-bottom: 1rem;
     }
 
-    .contact-info a:hover {
-      text-decoration: underline;
+    main.contact-main p {
+      max-width: 600px;
+      margin: 0.5rem auto 2rem;
+      line-height: 1.6;
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 2rem 3rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .contact-item {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .contact-item strong {
+      color: #004aad;
+      margin-right: 8px;
+    }
+
+    .contact-item a {
+      color: #222;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-item a:hover {
+      color: #004aad;
+    }
+
+    /* Footer fix */
+    footer.footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 1.2rem 0;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    footer.footer nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer.footer nav a:hover {
+      color: #fff;
+    }
+
+    .logo img {
+      height: 45px;
+    }
+
+    /* Optional active link styling */
+    .nav a.active {
+      color: #004aad;
+      font-weight: 600;
+      border-bottom: 2px solid #004aad;
     }
   </style>
 </head>
@@ -43,7 +113,7 @@
       <a href="../index.html">Home</a>
       <a href="about.html">About</a>
       <a href="../index.html#services">Services</a>
-      <a href="contact.html" aria-current="page" class="active">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
     <div class="search-bar">
       <input type="search" placeholder="Search here..." aria-label="Search">
@@ -52,12 +122,18 @@
 
   <!-- Main -->
   <main class="contact-main">
-    <h2>Get in Touch with Us</h2>
-    <p>We’d love to hear from you! You can reach us directly through the contact details below:</p>
+    <h2>Get in Touch</h2>
+    <p>We’re always happy to hear from you. Contact us through any of the options below and we’ll get back to you shortly.</p>
 
-    <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:sihtricsasu@gmail.com">sihtricsasu@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+233541934888">0541934888</a></p>
+    <div class="contact-card">
+      <div class="contact-item">
+        <strong>Email:</strong>
+        <a href="mailto:sihtricsasu@gmail.com">sihtricsasu@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <strong>Phone:</strong>
+        <a href="tel:+233541934888">0541 934 888</a>
+      </div>
     </div>
   </main>
 
