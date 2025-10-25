@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sikaMotion • Home</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* WhatsApp Button Styling */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      background-color: #20b358;
+    }
+
+    .whatsapp-btn img {
+      width: 32px;
+      height: 32px;
+    }
+
+    /* Optional - Hide honeypot field */
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -26,7 +62,6 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <!-- Slideshow -->
     <div class="slideshow-container">
       <div class="slide fade">
         <img src="images/slide1.jpg" alt="Fashion creativity showcase">
@@ -39,7 +74,6 @@
       </div>
     </div>
 
-    <!-- Hero Content -->
     <div class="hero-content">
       <h1>HELLO & WELCOME to <span>sikaMotion TECH LITE</span></h1>
       <div class="hero-buttons">
@@ -67,18 +101,15 @@
 
     <!-- ✅ Netlify Form with Auto-Reply -->
     <form name="register" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
-      <!-- Hidden inputs for Netlify -->
       <input type="hidden" name="form-name" value="register">
       <input type="hidden" name="subject" value="New Registration - sikaMotion">
       <input type="hidden" name="reply-to" value="%email%">
       <input type="hidden" name="autoresponse" value="Thank you for contacting sikaMotion Tech Support.">
 
-      <!-- Anti-spam field -->
       <p class="hidden">
         <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
       </p>
 
-      <!-- Form Fields -->
       <input type="text" name="name" placeholder="Type your full name" required>
       <input type="email" name="email" placeholder="Enter a valid email" required>
       <input type="password" name="password" placeholder="Enter your password" required>
@@ -111,6 +142,11 @@
     </nav>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/233539656912" class="whatsapp-btn" target="_blank" title="Chat with us on WhatsApp">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
   <!-- Slideshow Script -->
   <script>
     let slideIndex = 0;
@@ -124,7 +160,7 @@
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // 4s interval
+      setTimeout(showSlides, 4000);
     }
   </script>
 </body>
