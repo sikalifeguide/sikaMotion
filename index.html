@@ -14,7 +14,7 @@
       <span>sikaMotion TECH LITE</span>
     </div>
     <nav class="nav">
-      <a href="index.html" aria-current="page">Home</a>
+      <a href="index.html" aria-current="page" class="active">Home</a>
       <a href="pages/about.html">About</a>
       <a href="#services">Services</a>
       <a href="pages/contact.html">Contact</a>
@@ -64,9 +64,21 @@
   <!-- Form Section -->
   <section class="form-section" id="form">
     <h3>Register to Join Us</h3>
-    <form name="register" method="POST" data-netlify="true" action="thank-you.html">
-      <input type="hidden" name="form-name" value="register">
 
+    <!-- ✅ Netlify Form with Auto-Reply -->
+    <form name="register" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
+      <!-- Hidden inputs for Netlify -->
+      <input type="hidden" name="form-name" value="register">
+      <input type="hidden" name="subject" value="New Registration - sikaMotion">
+      <input type="hidden" name="reply-to" value="%email%">
+      <input type="hidden" name="autoresponse" value="Thank you for contacting sikaMotion Tech Support.">
+
+      <!-- Anti-spam field -->
+      <p class="hidden">
+        <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+      </p>
+
+      <!-- Form Fields -->
       <input type="text" name="name" placeholder="Type your full name" required>
       <input type="email" name="email" placeholder="Enter a valid email" required>
       <input type="password" name="password" placeholder="Enter your password" required>
